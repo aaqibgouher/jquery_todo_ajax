@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Aaqib Gouher | Portfolio</title>
+
+        <!-- css -->
+        <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <h2>To Do <span class="badge pull-right" id="todo_count">0</span></h2>
+                    <form id="todo_form">
+                        <div class="form-group">
+                            <input class="form-control" id="todo_input" type="text" placeholder="Enter task" autofocus>
+                        </div>
+                        <button class="btn btn-success btn-block" id="todo_btn">Add Todo</button>
+                    </form>
+                    <br>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default filter_btn" data-filter="all">All</button>
+                        <button type="button" class="btn btn-default filter_btn" data-filter="completed">Completed <span class="badge" id="todo_completed_count">0</span></button>
+                        <button type="button" class="btn btn-default filter_btn" data-filter="not_completed">Not Completed <span class="badge" id="todo_not_completed_count">0</span></button>
+                    </div>
+                    <hr>
+                    <ul class="list-group" id="todo_list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
