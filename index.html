@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8">          <!--used for all type screen size. it is in-built feature of the bootstrap that it will automatically resized its page according to its screen.-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Aaqib Gouher | Portfolio</title>
+        <title>jQuerry ToDo Ajax</title>        <!--title for our application-->
 
         <!-- css -->
-        <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/app.css" rel="stylesheet">
+        <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">      <!--loading bootstrap in our page.-->
+        <link href="css/app.css" rel="stylesheet">          <!--path of the css file,that we are gonna use in our application.-->
         
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <h2>To Do <span class="badge pull-right" id="todo_count">0</span></h2>
-                    <form id="todo_form">
-                        <div class="form-group">
-                            <input class="form-control" id="todo_input" type="text" placeholder="Enter task" autofocus>
+            <div class="row">       <!--taken a row class.-->
+                <div class="col-md-4 col-md-offset-4">          <!--so our div will be composed of 4 columns, and we want our div in the center. so we have given offset of 4.when we will inspect it, will see that a gap of 4 row to the left of our div.Also a single row can hold max of 12 col, so we have offset 4 , and used 4 col .so the remaining one is 4. hence it is automatically allign in the center.-->
+                    <h2>To Do <span class="badge pull-right" id="todo_count">0</span></h2>          <!--Given a h2 heading i.e to do's. then we have added a span tag(used because we have to add our badge in the same line.) which will show the count of the total number of todos present.basically in the previous one , we are storing every todo in the array, but now , the data is coming from server.also we have given the id of that badge.-->
+                    <form id="todo_form">           <!--used form tag.and given it a id.-->
+                        <div class="form-group">        <!--form-group is a pre-defined class in bootstrap for form tag.-->
+                            <input class="form-control" id="todo_input" type="text" placeholder="Enter task" autofocus>         <!--a input tag, take input from user.basically in this we are not taking the todos from user and adding it. but it is present in the server actually. so we are just bringing it , and applying our application on it.we have given a pre defined class, id of the input tag,type(which type of data will come as a input), placeholder,and autofocus(when we will open our application, then our cursor will present there.we dont have to bring our cursor to that input tag.)-->
                         </div>
-                        <button class="btn btn-success btn-block" id="todo_btn">Add Todo</button>
+                        <button class="btn btn-success btn-block" id="todo_btn">Add Todo</button>           <!--taken a btn, have predefined classes, btn is success type and also a block btn is used.Have given id of the btn.-->
                     </form>
-                    <br>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default filter_btn" data-filter="all">All</button>
+                    <br>        <!--for giving a space between our form tag and new div.-->
+                    <div class="btn-group">         <!--predefined class is used here for using the btn group.-->
+                        <button type="button" class="btn btn-default filter_btn" data-filter="all">All</button>         <!--inside that div, we have taken a three buttons.all of them have the same class as well .we will use the filter_btn class in our application.Also we have added a new attribute called data-filter. and for all the btns it is different.So here we are showing , all of the todos, completed todos, and incompleted todos.-->
                         <button type="button" class="btn btn-default filter_btn" data-filter="completed">Completed <span class="badge" id="todo_completed_count">0</span></button>
                         <button type="button" class="btn btn-default filter_btn" data-filter="not_completed">Not Completed <span class="badge" id="todo_not_completed_count">0</span></button>
                     </div>
-                    <hr>
-                    <ul class="list-group" id="todo_list"></ul>
+                    <hr>        <!--for horizontal line, we dont have to give any margin and padding .-->
+                    <ul class="list-group" id="todo_list"></ul>             <!--unordered list, it has predefined class called list-group.and we have added id of it. So , all of li tags will dynamically add here , and then it will show on the application.-->
                 </div>
             </div>
         </div>
 
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/app.js"></script>
+        <script src="plugins/jquery/jquery.min.js"></script>        <!--Added jQurry file path.-->
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>       <!--added our plugins path.-->
+        <script src="js/app.js"></script>       <!--Added our js file path.-->
     </body>
 </html>
